@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family:
+    Inter,
+    'Segoe UI',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1b2333;
+  background: #f8fafd;
+  font-synthesis: none;
+
+  --primary: #245eea;
+  --primary-dark: #184bc6;
+  --primary-light: #edf4ff;
+  --background: #f8fafd;
+  --surface: #ffffff;
+  --border: #e1e5ec;
+  --text: #1b2333;
+  --text-muted: #647083;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--background);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9db8ff;
+  outline-offset: 3px;
+}
+
+svg {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

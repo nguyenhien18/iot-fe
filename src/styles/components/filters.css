@@ -1,0 +1,71 @@
+.filter-box {
+  width: 100%;
+  display: grid;
+  align-items: end;
+  gap: 12px;
+}
+
+.filter-field {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.filter-field label {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.filter-field input,
+.filter-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid #dfe2e9;
+  border-radius: 8px;
+  outline: none;
+  color: #4b5362;
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.filter-field select {
+  padding-right: 28px;
+}
+
+.filter-field input::placeholder {
+  color: #969ca8;
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+  border-color: #85a6fa;
+  box-shadow: 0 0 0 3px #245eea14;
+}
+
+.search-field > svg {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  color: #969ca8;
+  pointer-events: none;
+}
+
+.search-field input {
+  padding-left: 38px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media (max-width: 620px) {
+  .filter-buttons,
+  .filter-buttons .primary-btn {
+    width: 100%;
+  }
+}

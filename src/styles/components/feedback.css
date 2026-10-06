@@ -1,0 +1,57 @@
+.loading {
+  min-height: 160px;
+  color: #707989;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dfe7fb;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.mini-switch {
+  width: 40px;
+  height: 23px;
+  flex: 0 0 40px;
+  padding: 3px;
+  border: 0;
+  border-radius: 999px;
+  background: #dfe1e7;
+  transition: background 180ms;
+}
+
+.mini-switch span {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 1px 3px #00000022;
+  transition: transform 180ms;
+}
+
+.mini-switch.on {
+  background: var(--primary);
+}
+
+.mini-switch.on span {
+  transform: translateX(17px);
+}
+
+.mini-switch:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}

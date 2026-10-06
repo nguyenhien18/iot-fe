@@ -1,0 +1,391 @@
+.dashboard-page {
+  width: 100%;
+}
+
+.summary-strip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.summary-item {
+  min-width: 0;
+  min-height: 160px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.summary-copy {
+  min-width: 0;
+  display: grid;
+}
+
+.summary-copy > span {
+  color: #465165;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.summary-copy strong {
+  margin-top: 12px;
+  color: #172033;
+  font-size: clamp(27px, 2.3vw, 36px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+}
+
+.summary-copy small {
+  margin-top: 12px;
+  color: #778397;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.summary-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.summary-icon.temperature {
+  color: #245eea;
+  background: #edf4ff;
+}
+
+.summary-icon.humidity {
+  color: #16a34a;
+  background: #ecfdf3;
+}
+
+.summary-icon.light {
+  color: #c68600;
+  background: #fff9e6;
+}
+
+.dashboard-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+}
+
+.chart-card,
+.device-panel {
+  min-width: 0;
+}
+
+.chart-inner,
+.device-panel-body {
+  height: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.chart-inner {
+  padding: 26px 24px 18px;
+}
+
+.chart-title {
+  margin: 0 0 24px;
+  color: #182230;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+
+.chart-plot {
+  width: 100%;
+  height: 300px;
+  min-width: 0;
+}
+
+.recharts-default-legend {
+  padding-top: 10px !important;
+  font-size: 12px;
+}
+
+.device-panel-body {
+  padding: 26px 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.device-panel-heading {
+  margin-bottom: 16px;
+}
+
+.dashboard-page .device-panel-heading .chart-title {
+  margin-bottom: 6px;
+}
+
+.device-active-count {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.device-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.device-actions button {
+  flex: 1;
+  min-height: 38px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.device-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.device-error {
+  margin: 0 0 12px;
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.device-empty {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.chart-axis-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.chart-axis-labels span:last-child {
+  color: #a56c0a;
+}
+
+.chart-empty {
+  min-height: 300px;
+  flex: 1;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.device-row {
+  flex: 1;
+  min-height: 70px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.device-row:last-child {
+  border-bottom: 0;
+}
+
+.device-row > div {
+  display: grid;
+  gap: 6px;
+}
+
+.device-row strong {
+  color: #283347;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.device-row small {
+  color: #788498;
+  font-size: 12px;
+}
+@media (min-width: 1600px) {
+  .summary-item {
+    min-height: 180px;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .summary-item:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 620px) {
+  .summary-strip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .summary-strip {
+    gap: 14px;
+  }
+
+  .summary-item,
+  .summary-item:last-child {
+    grid-column: auto;
+    min-height: 124px;
+    padding: 18px;
+  }
+
+  .summary-copy > span {
+    font-size: 14px;
+  }
+
+  .summary-copy strong {
+    margin-top: 7px;
+    font-size: 30px;
+  }
+
+  .summary-copy small {
+    margin-top: 7px;
+  }
+
+  .summary-icon {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .chart-inner,
+  .device-panel-body {
+    padding: 20px 14px 12px;
+  }
+
+  .chart-title {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1251px) and (min-height: 700px) {
+  .dashboard-shell,
+  .dashboard-shell .app-main {
+    height: 100dvh;
+    min-height: 0;
+  }
+
+  .dashboard-shell .page-header {
+    padding: 22px 32px 0;
+  }
+
+  .dashboard-shell .page-header h1 {
+    font-size: clamp(26px, 2vw, 32px);
+  }
+
+  .dashboard-shell .page-header p {
+    margin-top: 4px;
+  }
+
+  .dashboard-shell .page-panel {
+    min-height: 0;
+    padding: 18px 32px 20px;
+    display: flex;
+  }
+
+  .dashboard-page {
+    min-height: 0;
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-content: start;
+    gap: 18px;
+  }
+
+  .dashboard-page .summary-strip {
+    gap: 16px;
+  }
+
+  .dashboard-page .summary-item {
+    height: clamp(115px, 15vh, 150px);
+    min-height: 0;
+    padding: 18px 20px;
+  }
+
+  .dashboard-page .summary-copy strong {
+    margin-top: 6px;
+  }
+
+  .dashboard-page .summary-copy small {
+    margin-top: 7px;
+  }
+
+  .dashboard-page .summary-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .dashboard-page .dashboard-grid {
+    height: clamp(360px, 52vh, 520px);
+    min-height: 0;
+    margin-top: 0;
+    grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.85fr);
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .dashboard-page .chart-card,
+  .dashboard-page .device-panel {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .dashboard-page .chart-inner {
+    height: 100%;
+    min-height: 0;
+    padding: 18px 18px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard-page .chart-title {
+    margin-bottom: 12px;
+    font-size: 17px;
+    flex: 0 0 auto;
+  }
+
+  .dashboard-page .chart-plot {
+    height: auto;
+    min-height: 0;
+    flex: 1;
+  }
+
+  .dashboard-page .device-panel-body {
+    height: 100%;
+    min-height: 0;
+    padding: 18px 18px 8px;
+    overflow-y: auto;
+  }
+
+  .dashboard-page .device-row {
+    min-height: clamp(51px, 7vh, 70px);
+  }
+}

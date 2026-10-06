@@ -1,0 +1,75 @@
+iot-fe-ui-frame/
+├── src/
+│   ├── api/
+│   │   ├── apiService.js
+│   │   └── axiosClient.js
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── DataTable.jsx
+│   │   │   ├── Icon.jsx
+│   │   │   ├── Loading.jsx
+│   │   │   ├── PageIntro.jsx
+│   │   │   └── Toggle.jsx
+│   │   └── layout/
+│   │       ├── Brand.jsx
+│   │       ├── DashboardLayout.jsx
+│   │       ├── Sidebar.jsx
+│   │       └── Topbar.jsx
+│   ├── config/
+│   │   └── navigation.js
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   ├── features/
+│   │   ├── activity/
+│   │   │   └── ActivityHistoryPage.jsx
+│   │   ├── auth/
+│   │   │   ├── LoginPage.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── overview/
+│   │   │   ├── components/
+│   │   │   │   ├── MetricCard.jsx
+│   │   │   │   └── SensorChart.jsx
+│   │   │   └── OverviewPage.jsx
+│   │   ├── profile/
+│   │   │   └── ProfilePage.jsx
+│   │   └── sensors/
+│   │       └── SensorHistoryPage.jsx
+│   ├── hooks/
+│   │   └── useAuth.js
+│   ├── mocks/
+│   │   └── iotData.js
+│   ├── styles/
+│   │   ├── components/
+│   │   │   ├── feedback.css
+│   │   │   ├── filters.css
+│   │   │   ├── page.css
+│   │   │   └── table.css
+│   │   ├── layout/
+│   │   │   ├── shell.css
+│   │   │   ├── sidebar.css
+│   │   │   └── topbar.css
+│   │   ├── pages/
+│   │   │   ├── activity-history.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── login.css
+│   │   │   ├── profile.css
+│   │   │   └── sensor-history.css
+│   │   ├── README.md
+│   │   ├── globals.css
+│   │   └── index.css
+│   ├── utils/
+│   │   ├── dateTime.js
+│   │   └── sensorLabels.js
+│   ├── App.jsx
+│   └── main.jsx
+├── .editorconfig
+├── .env.example
+├── .gitignore
+├── .prettierignore
+├── .prettierrc.json
+├── PROJECT_STRUCTURE.txt
+├── README.md
+├── index.html
+├── package-lock.json
+├── package.json
+└── vite.config.js

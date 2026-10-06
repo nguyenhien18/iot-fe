@@ -1,0 +1,44 @@
+.page-header {
+  padding: 42px 40px 0;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(27px, 2.3vw, 34px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.page-header p {
+  margin: 7px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (min-width: 1600px) {
+  .page-header {
+    padding: 48px 48px 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .page-header {
+    padding: 34px 28px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .page-header {
+    padding: 26px 18px 0;
+  }
+
+  .page-header h1 {
+    font-size: 25px;
+  }
+
+  .page-header p {
+    font-size: 12px;
+  }
+}

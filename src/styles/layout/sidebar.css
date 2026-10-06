@@ -1,0 +1,174 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  padding: 26px 18px;
+  background: var(--surface);
+  border-right: 1px solid #e5e7ec;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand {
+  min-height: 52px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 36px;
+  flex: 0 0 32px;
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand-copy strong {
+  color: #17171b;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+}
+
+.sidebar-toggle {
+  margin-left: auto;
+  padding: 5px;
+  border: 0;
+  border-radius: 4px;
+  color: #818185;
+  background: transparent;
+}
+
+.sidebar-toggle:hover {
+  color: #303033;
+  background: #f0f2f6;
+}
+
+.sidebar-nav {
+  padding-top: 28px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-caption {
+  display: none;
+}
+
+.sidebar-link {
+  min-height: 50px;
+  padding: 11px 15px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #222329;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition:
+    color 150ms,
+    background 150ms;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.sidebar-icon {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  display: grid;
+  place-items: center;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.logout-button {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 8px;
+  color: #6f727b;
+  background: transparent;
+  font-size: 14px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logout-button:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.sidebar-collapsed .sidebar {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sidebar-collapsed .brand-copy,
+.sidebar-collapsed .sidebar-label {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-brand {
+  padding: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-collapsed .sidebar-toggle {
+  margin: 0;
+}
+
+.sidebar-collapsed .sidebar-link,
+.sidebar-collapsed .logout-button {
+  padding-right: 0;
+  padding-left: 0;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .sidebar,
+  .sidebar-collapsed .sidebar {
+    padding: 20px 8px;
+  }
+
+  .brand-copy,
+  .sidebar-label,
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .sidebar-brand,
+  .sidebar-link,
+  .logout-button {
+    padding-right: 0;
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .sidebar,
+  .sidebar-collapsed .sidebar {
+    padding: 14px 5px;
+  }
+}
